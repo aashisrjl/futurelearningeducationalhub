@@ -1,7 +1,16 @@
+
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,66 +63,83 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-brand-blue hover:text-brand-gold font-medium transition">
-              Home
-            </Link>
-            <a href="#about" className="text-brand-blue hover:text-brand-gold font-medium transition">
-              About
-            </a>
-            
-            <div className="dropdown relative">
-              <button className="text-brand-blue hover:text-brand-gold font-medium transition flex items-center">
-                Study Abroad <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <div className="dropdown-content">
-                <Link to="/study/japan" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  Japan 🇯🇵
-                </Link>
-                <a href="#study-australia" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  Australia 🇦🇺
-                </a>
-                <a href="#study-uk" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  UK 🇬🇧
-                </a>
-                <a href="#study-canada" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  Canada 🇨🇦
-                </a>
-                <a href="#study-korea" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  South Korea 🇰🇷
-                </a>
-                <a href="#study-usa" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  USA 🇺🇸
-                </a>
-              </div>
-            </div>
-
-            <div className="dropdown relative">
-              <button className="text-brand-blue hover:text-brand-gold font-medium transition flex items-center">
-                Test Preparation <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <div className="dropdown-content">
-                <a href="#japanese-language" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  Japanese Language
-                </a>
-                <a href="#ielts" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  IELTS
-                </a>
-                <a href="#pte" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
-                  PTE
-                </a>
-              </div>
-            </div>
-
-            <a href="#contact" className="text-brand-blue hover:text-brand-gold font-medium transition">
-              Contact
-            </a>
-
-            <Button className="bg-brand-blue hover:bg-brand-gold text-white transition">
-              <a href="#contact">Get Started</a>
-            </Button>
-          </nav>
+          {/* Desktop Navigation with shadcn/ui NavigationMenu */}
+          <div className="hidden md:flex">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <Link to="/" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
+                    Home
+                  </Link>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <a href="#about" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
+                    About
+                  </a>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-brand-blue hover:text-brand-gold font-medium">
+                    Study Abroad
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[200px] p-2 bg-white">
+                      <Link to="/study/japan" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        Japan 🇯🇵
+                      </Link>
+                      <Link to="/study/australia" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        Australia 🇦🇺
+                      </Link>
+                      <Link to="/study/uk" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        UK 🇬🇧
+                      </Link>
+                      <Link to="/study/canada" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        Canada 🇨🇦
+                      </Link>
+                      <Link to="/study/korea" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        South Korea 🇰🇷
+                      </Link>
+                      <Link to="/study/usa" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        USA 🇺🇸
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-brand-blue hover:text-brand-gold font-medium">
+                    Test Preparation
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[200px] p-2 bg-white">
+                      <a href="#japanese-language" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        Japanese Language
+                      </a>
+                      <a href="#ielts" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        IELTS
+                      </a>
+                      <a href="#pte" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        PTE
+                      </a>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <a href="#contact" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
+                    Contact
+                  </a>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <Button className="bg-brand-blue hover:bg-brand-gold text-white transition ml-2">
+                    <a href="#contact">Get Started</a>
+                  </Button>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -138,16 +164,16 @@ const Navbar: React.FC = () => {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white shadow-lg absolute left-0 right-0 top-full">
             <div className="container mx-auto py-3 space-y-2">
-              <a href="#home" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">Home</a>
+              <Link to="/" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">Home</Link>
               <a href="#about" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">About</a>
               
               <div className="px-4 py-2 text-brand-blue">Study Abroad</div>
-              <a href="#study-japan" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Japan 🇯🇵</a>
-              <a href="#study-australia" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Australia 🇦🇺</a>
-              <a href="#study-uk" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">UK 🇬🇧</a>
-              <a href="#study-canada" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Canada 🇨🇦</a>
-              <a href="#study-korea" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">South Korea 🇰🇷</a>
-              <a href="#study-usa" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">USA 🇺🇸</a>
+              <Link to="/study/japan" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Japan 🇯🇵</Link>
+              <Link to="/study/australia" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Australia 🇦🇺</Link>
+              <Link to="/study/uk" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">UK 🇬🇧</Link>
+              <Link to="/study/canada" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Canada 🇨🇦</Link>
+              <Link to="/study/korea" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">South Korea 🇰🇷</Link>
+              <Link to="/study/usa" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">USA 🇺🇸</Link>
               
               <div className="px-4 py-2 text-brand-blue">Test Preparation</div>
               <a href="#japanese-language" className="block px-8 py-2 hover:bg-gray-100 text-brand-blue">Japanese Language</a>

@@ -104,11 +104,3 @@
     @apply font-lato;
   }
 }
-
-.dropdown-content {
-  @apply hidden absolute z-50 bg-white shadow-lg rounded-md py-2 mt-2 min-w-[200px] animate-fade-in;
-}
-
-.dropdown:hover .dropdown-content {
-  @apply block;
-}
