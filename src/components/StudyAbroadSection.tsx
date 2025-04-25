@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface CountryCardProps {
   name: string;
@@ -8,9 +8,10 @@ interface CountryCardProps {
   image: string;
   description: string;
   id: string;
+  path: string;
 }
 
-const CountryCard: React.FC<CountryCardProps> = ({ name, flag, image, description, id }) => {
+const CountryCard: React.FC<CountryCardProps> = ({ name, flag, image, description, id, path }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" id={id}>
       <div className="relative h-48 overflow-hidden">
@@ -21,7 +22,9 @@ const CountryCard: React.FC<CountryCardProps> = ({ name, flag, image, descriptio
           {name} <span className="ml-2 text-2xl">{flag}</span>
         </h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <Button className="w-full bg-brand-blue hover:bg-brand-gold text-white">Learn More</Button>
+        <Link to={path}>
+          <Button className="w-full bg-brand-blue hover:bg-brand-gold text-white">Learn More</Button>
+        </Link>
       </div>
     </div>
   );
@@ -34,42 +37,48 @@ const StudyAbroadSection: React.FC = () => {
       name: "Japan",
       flag: "🇯🇵",
       image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Study in Japan to experience cutting-edge technology, rich cultural heritage, and excellent educational standards."
+      description: "Study in Japan to experience cutting-edge technology, rich cultural heritage, and excellent educational standards.",
+      path: "/study/japan"
     },
     {
       id: "study-australia",
       name: "Australia",
       flag: "🇦🇺",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Australia offers world-class education, amazing quality of life, and post-study work opportunities."
+      description: "Australia offers world-class education, amazing quality of life, and post-study work opportunities.",
+      path: "/study/australia"
     },
     {
       id: "study-uk",
       name: "UK",
       flag: "🇬🇧",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "The UK is home to some of the world's oldest universities with a reputation for academic excellence and innovation."
+      description: "The UK is home to some of the world's oldest universities with a reputation for academic excellence and innovation.",
+      path: "/study/uk"
     },
     {
       id: "study-canada",
       name: "Canada",
       flag: "🇨🇦",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Canada provides affordable education with immigrant-friendly policies and diverse, inclusive communities."
+      description: "Canada provides affordable education with immigrant-friendly policies and diverse, inclusive communities.",
+      path: "/study/canada"
     },
     {
       id: "study-korea",
       name: "South Korea",
       flag: "🇰🇷",
       image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "South Korea combines technological advancement with rich cultural traditions and growing international programs."
+      description: "South Korea combines technological advancement with rich cultural traditions and growing international programs.",
+      path: "/study/korea"
     },
     {
       id: "study-usa",
       name: "USA",
       flag: "🇺🇸",
       image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "The USA offers diverse educational opportunities with renowned research facilities and vibrant campus life."
+      description: "The USA offers diverse educational opportunities with renowned research facilities and vibrant campus life.",
+      path: "/study/usa"
     }
   ];
 
@@ -127,6 +136,7 @@ const StudyAbroadSection: React.FC = () => {
               flag={country.flag}
               image={country.image}
               description={country.description}
+              path={country.path}
             />
           ))}
         </div>

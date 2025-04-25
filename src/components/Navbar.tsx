@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,18 +47,18 @@ const Navbar: React.FC = () => {
       <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#home" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-brand-blue">
                 Future<span className="text-brand-gold">Learning</span>
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#home" className="text-brand-blue hover:text-brand-gold font-medium transition">
+            <Link to="/" className="text-brand-blue hover:text-brand-gold font-medium transition">
               Home
-            </a>
+            </Link>
             <a href="#about" className="text-brand-blue hover:text-brand-gold font-medium transition">
               About
             </a>
@@ -68,9 +68,9 @@ const Navbar: React.FC = () => {
                 Study Abroad <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="dropdown-content">
-                <a href="#study-japan" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                <Link to="/study/japan" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
                   Japan 🇯🇵
-                </a>
+                </Link>
                 <a href="#study-australia" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
                   Australia 🇦🇺
                 </a>
