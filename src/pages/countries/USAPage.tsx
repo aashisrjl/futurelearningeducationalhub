@@ -1,0 +1,92 @@
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Footer from "@/components/Footer";
+
+const USAPage = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gray-50">
+        <div className="relative h-[50vh] bg-cover bg-center" 
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1466442929976-97f336a657be')" }}>
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white text-center">Study in the USA 🇺🇸</h1>
+          </div>
+        </div>
+
+        <div className="container mx-auto py-12 px-4">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-bold text-brand-blue mb-6">Why Study in the USA?</h2>
+              <div className="space-y-4 text-gray-600">
+                <p>The USA offers world-class education with unparalleled research opportunities and campus life experiences.</p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Top-ranked universities</li>
+                  <li>Cutting-edge research facilities</li>
+                  <li>Flexible education system</li>
+                  <li>Optional Practical Training (OPT)</li>
+                  <li>Diverse campus culture</li>
+                </ul>
+              </div>
+            </div>
+            
+            <Card className="p-6">
+              <CardHeader>
+                <CardTitle>Available Programs</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <h3 className="font-semibold mb-2">Undergraduate</h3>
+                  <p>4-year bachelor's degrees</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Graduate</h3>
+                  <p>Master's and PhD programs</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Community College</h3>
+                  <p>2-year associate degrees</p>
+                </div>
+                <Button className="w-full mt-4">Contact Us for More Information</Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-3xl font-bold text-brand-blue mb-6">Application Process</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Step 1: Standardized Tests</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Take required tests (SAT/ACT/GRE/TOEFL)</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Step 2: University Applications</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Submit applications with required documents</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Step 3: F-1 Visa Process</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Apply for your F-1 student visa</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default USAPage;

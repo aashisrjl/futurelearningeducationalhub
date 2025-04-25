@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import JapanPage from "./pages/countries/JapanPage";
+import AustraliaPage from "./pages/countries/AustraliaPage";
+import UKPage from "./pages/countries/UKPage";
+import CanadaPage from "./pages/countries/CanadaPage";
+import USAPage from "./pages/countries/USAPage";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +23,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/study/japan" element={<JapanPage />} />
+          <Route path="/study/australia" element={<AustraliaPage />} />
+          <Route path="/study/uk" element={<UKPage />} />
+          <Route path="/study/canada" element={<CanadaPage />} />
+          <Route path="/study/usa" element={<USAPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
