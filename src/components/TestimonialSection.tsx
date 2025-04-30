@@ -43,7 +43,7 @@ const TestimonialSection: React.FC = () => {
       text: "Future Learning Educational Hub made my dream of studying in Japan come true. Their Japanese language classes and visa assistance were exceptional. I'm now pursuing my degree in Tokyo with confidence."
     },
     {
-      name: "Amir Thapa",
+      name: "Aashish Rijal",
       country: "Studying in Australia",
       photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       text: "I'm grateful to the team for their personalized guidance throughout my university application process. Their IELTS preparation helped me secure an excellent band score, and their counseling was spot-on."

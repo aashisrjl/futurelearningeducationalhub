@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <a href="#about" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
+                  <a href="/#about" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
                     About
                   </a>
                 </NavigationMenuItem>
@@ -128,14 +128,14 @@ const Navbar: React.FC = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <a href="#contact" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
+                  <a href="/#contact" className="text-brand-blue hover:text-brand-gold font-medium transition px-4 py-2 inline-block">
                     Contact
                   </a>
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
                   <Button className="bg-brand-blue hover:bg-brand-gold text-white transition ml-2">
-                    <a href="#contact">Get Started</a>
+                    <a href="/#contact">Get Started</a>
                   </Button>
                 </NavigationMenuItem>
               </NavigationMenuList>

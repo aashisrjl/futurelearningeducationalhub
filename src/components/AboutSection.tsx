@@ -209,6 +209,16 @@ const AboutSection: React.FC = () => {
           </div>
         </motion.div>
       </motion.div>
+      {/* CTA */}
+      <motion.div className="text-center mt-12" variants={containerVariants}>
+          <a
+            href="#contact"
+            className="inline-block bg-brand-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300"
+          >
+            Get Started Today
+          </a>
+        </motion.div>
+      
     </section>
   );
 };

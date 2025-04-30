@@ -138,7 +138,7 @@ const ContactSection: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Office Hours</h4>
                     <p className="text-gray-600">
-                      Sunday - Friday: 9:00 AM - 6:00 PM<br />
+                      Sunday - Friday: 7:00 AM - 6:00 PM<br />
                       Saturday: Closed
                     </p>
                   </div>

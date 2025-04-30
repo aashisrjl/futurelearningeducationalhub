@@ -15,8 +15,11 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Your Future Journey Starts Here
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8">
+          <p className="text-xl md:text-2xl text-white">
             Trusted Guidance for a Brighter Future
+          </p>
+          <p className="text-xl md:text-xl text-white mb-8">
+            -- more than a consultancy
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button className="bg-brand-blue hover:bg-brand-gold text-white rounded-md text-lg px-8 py-6">
