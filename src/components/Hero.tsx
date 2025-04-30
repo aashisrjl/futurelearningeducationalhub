@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="text-center animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-            Your Global Journey Starts Here
+            Your Future Journey Starts Here
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8">
             Trusted Guidance for a Brighter Future

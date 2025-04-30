@@ -58,7 +58,8 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-brand-blue">
-                Future<span className="text-brand-gold">Learning</span>
+                {/* Future<span className="text-brand-gold">Learning</span>Educational<span className="text-brand-gold">Hub</span> */}
+                <img className="w-16 h-auto" src="/logo.jpg" alt="logo"  />
               </span>
             </Link>
           </div>

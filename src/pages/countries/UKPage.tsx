@@ -3,10 +3,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const UKPage = () => {
   return (
     <>
+      <Navbar />
       <div className="min-h-screen bg-gray-50">
         <div className="relative h-[50vh] bg-cover bg-center" 
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1485833077593-4278bba3f11f')" }}>
