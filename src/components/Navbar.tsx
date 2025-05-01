@@ -114,14 +114,17 @@ const Navbar: React.FC = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[200px] p-2 bg-white">
-                      <a href="#japanese-language" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                      <a href="/#japanese-language" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
                         Japanese Language
                       </a>
-                      <a href="#ielts" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                      <a href="/#ielts" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
                         IELTS
                       </a>
-                      <a href="#pte" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                      <a href="/#pte" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
                         PTE
+                      </a>
+                      <a href="/#skills" className="block px-4 py-2 hover:bg-gray-100 text-brand-blue">
+                        Skill Training 
                       </a>
                     </div>
                   </NavigationMenuContent>

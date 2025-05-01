@@ -114,7 +114,7 @@ const AboutSection: React.FC = () => {
           <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
             <h3 className="text-2xl font-bold text-brand-blue mb-4">Who We Are</h3>
             <p className="text-gray-600 leading-relaxed">
-              Established in 2015, Future Learning Educational Hub has been a trusted name in educational consultancy in Nepal. 
+              Established in 2024, Future Learning Educational Hub has been a trusted name in educational consultancy in Nepal. 
               We specialize in helping students navigate the complex process of applying to international universities and ensuring 
               they have all the support they need to succeed. Our team of experienced counselors and instructors are dedicated to 
               providing personalized guidance and quality education to help our students achieve their academic and career goals.

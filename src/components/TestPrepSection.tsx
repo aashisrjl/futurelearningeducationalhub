@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -47,22 +46,22 @@ const TestPrepSection: React.FC = () => {
       title: "JLPT N5 Preparation",
       description: "Basic Japanese language course for beginners aiming to pass the JLPT N5 exam.",
       duration: "3 months",
-      fee: "NPR 15,000",
-      schedule: ["Mon-Fri: 7:00 AM - 9:00 AM", "Mon-Fri: 4:00 PM - 6:00 PM"]
+      fee: "NPR 10,000",
+      schedule: ["Mon-Fri: 7:00 AM - 9:00 AM", "10:00 AM - 12:00 PM", "1:00 PM - 3:00 PM", "4:00 PM - 6:00 PM"]
     },
     {
       title: "JLPT N4 Preparation",
       description: "Intermediate course for students who have completed N5 or have equivalent knowledge.",
       duration: "4 months",
-      fee: "NPR 18,000",
-      schedule: ["Mon-Fri: 9:00 AM - 11:00 AM", "Mon-Fri: 6:00 PM - 8:00 PM"]
+      fee: "NPR 13,000",
+      schedule: ["Mon-Fri: 7:00 AM - 9:00 AM", "10:00 AM - 12:00 PM", "1:00 PM - 3:00 PM", "4:00 PM - 6:00 PM"]
     },
     {
       title: "JLPT N3 Preparation",
       description: "Advanced course focusing on more complex grammar and vocabulary required for N3.",
       duration: "5 months",
-      fee: "NPR 22,000",
-      schedule: ["Tue-Sat: 7:00 AM - 9:00 AM", "Tue-Sat: 5:00 PM - 7:00 PM"]
+      fee: "NPR 18,000",
+      schedule: ["Mon-Fri: 7:00 AM - 9:00 AM", "10:00 AM - 12:00 PM", "1:00 PM - 3:00 PM", "4:00 PM - 6:00 PM"]
     }
   ];
 
@@ -107,15 +106,60 @@ const TestPrepSection: React.FC = () => {
     }
   ];
 
+  const skillTestCourses = [
+    {
+      title: "Food Service Training",
+      description: "Comprehensive training for food service industry, covering hygiene, customer service, and food preparation techniques.",
+      duration: "8 weeks",
+      fee: "NPR 15,000",
+      schedule: ["Mon-Wed-Fri: 9:00 AM - 11:00 AM", "Tue-Thu: 3:00 PM - 5:00 PM"]
+    },
+    {
+      title: "Kaigo (Caregiving)",
+      description: "Specialized course for caregiving, focusing on elderly care, patient handling, and healthcare basics.",
+      duration: "10 weeks",
+      fee: "NPR 20,000",
+      schedule: ["Mon-Fri: 8:00 AM - 10:00 AM", "Sat-Sun: 1:00 PM - 4:00 PM"]
+    },
+    {
+      title: "Agriculture Skills",
+      description: "Hands-on training in modern farming techniques, crop management, and sustainable agriculture practices.",
+      duration: "12 weeks",
+      fee: "NPR 18,000",
+      schedule: ["Tue-Thu-Sat: 7:00 AM - 10:00 AM", "Mon-Wed: 4:00 PM - 6:00 PM"]
+    },
+    {
+      title: "Construction Basics",
+      description: "Practical course covering construction techniques, safety protocols, and basic masonry and carpentry skills.",
+      duration: "10 weeks",
+      fee: "NPR 17,000",
+      schedule: ["Mon-Fri: 8:00 AM - 10:00 AM", "Sat: 2:00 PM - 5:00 PM"]
+    },
+    {
+      title: "Driving Skills",
+      description: "Professional driving course focusing on road safety, vehicle maintenance, and advanced driving techniques.",
+      duration: "6 weeks",
+      fee: "NPR 14,000",
+      schedule: ["Tue-Thu-Sat: 6:00 AM - 8:00 AM", "Mon-Wed: 5:00 PM - 7:00 PM"]
+    },
+    {
+      title: "Hospitality Management",
+      description: "Training in hotel and restaurant management, customer service, and hospitality industry standards.",
+      duration: "8 weeks",
+      fee: "NPR 16,000",
+      schedule: ["Mon-Wed-Fri: 10:00 AM - 12:00 PM", "Tue-Thu: 4:00 PM - 6:00 PM"]
+    }
+  ];
+
   return (
     <section id="test-preparation" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
-            Test Preparation Courses
+            Test Preparation & Skill Courses
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Our specialized test preparation courses are designed to help you achieve high scores in language proficiency exams required for overseas education.
+            Our specialized courses are designed to help you achieve high scores in language proficiency exams and acquire practical skills for overseas opportunities.
           </p>
         </div>
 
@@ -143,6 +187,13 @@ const TestPrepSection: React.FC = () => {
               >
                 PTE
               </TabsTrigger>
+              <TabsTrigger 
+                value="skills" 
+                id="skills"
+                className="px-6 py-3 data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+              >
+                Skill Training
+              </TabsTrigger>
             </TabsList>
           </div>
           
@@ -165,6 +216,14 @@ const TestPrepSection: React.FC = () => {
           <TabsContent value="pte" className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pteCourses.map((course, index) => (
+                <CourseCard key={index} {...course} />
+              ))}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="skills" className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {skillTestCourses.map((course, index) => (
                 <CourseCard key={index} {...course} />
               ))}
             </div>

@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
     { label: 'Japanese Language', to: '/#japanese-language' },
     { label: 'IELTS', to: '/#ielts' },
     { label: 'PTE', to: '/#pte' },
+    { label: 'SKILL', to: '/#skills' },
   ];
 
   const studyAbroadLinks = [
@@ -48,7 +49,7 @@ const Footer: React.FC = () => {
                   />
                 </svg>
               </a>
-              <a href="#" className="hover:text-brand-gold transition" aria-label="Instagram">
+              <a href="https://www.instagram.com/futurelearningeducational/" className="hover:text-brand-gold transition" aria-label="Instagram">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
