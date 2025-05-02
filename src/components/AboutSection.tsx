@@ -49,7 +49,7 @@ const AboutSection: React.FC = () => {
     {
       name: "Updendra Bhnadari",
       position: "Founder & Director",
-      photo: "/upindra.png",
+      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
       bio: "4+ years of experience in international education consulting."
     },
     {
