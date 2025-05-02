@@ -49,25 +49,25 @@ const AboutSection: React.FC = () => {
     {
       name: " ...",
       position: "Founder & Director",
-      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      photo: "",
       bio: "4+ years of experience in international education consulting."
     },
     {
       name: " ...",
       position: "Chairman",
-      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      photo: "",
       bio: "Leading and managing the operation from 4+ years."
     },
     {
       name: " ...",
       position: "IELTS Instructor",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      photo: "",
       bio: "Former British Council teacher with band score of 8.5."
     },
     {
       name: " ...",
       position: "Student Counselor",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      photo: "",
       bio: "Specialized in Australian and Canadian university admissions."
     }
   ];
