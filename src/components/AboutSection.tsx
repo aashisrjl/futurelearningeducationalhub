@@ -47,16 +47,16 @@ const AboutSection: React.FC = () => {
 
   const team = [
     {
-      name: "Rajesh Sharma",
+      name: "Updendra Bhnadari",
       position: "Founder & Director",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-      bio: "15+ years of experience in international education consulting."
+      photo: "/upindra.png",
+      bio: "4+ years of experience in international education consulting."
     },
     {
-      name: "Priya Thapa",
-      position: "Head of Japanese Language",
+      name: "Rajesh Maharjan",
+      position: "Chairman",
       photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-      bio: "JLPT N1 certified with 8+ years of teaching experience."
+      bio: "Leading and managing the operation from 4+ years."
     },
     {
       name: "Anil Poudel",
