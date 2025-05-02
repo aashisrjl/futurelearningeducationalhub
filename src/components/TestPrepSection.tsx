@@ -71,22 +71,20 @@ const TestPrepSection: React.FC = () => {
       description: "Introductory course covering all four sections of the IELTS exam with basics.",
       duration: "6 weeks",
       fee: "NPR 12,000",
-      schedule: ["Mon-Wed-Fri: 7:00 AM - 9:00 AM", "Tue-Thu-Sat: 4:00 PM - 6:00 PM"]
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]
     },
     {
       title: "IELTS Intensive",
       description: "Comprehensive course with in-depth coverage and regular mock tests.",
       duration: "2 months",
       fee: "NPR 18,000",
-      schedule: ["Mon-Fri: 10:00 AM - 12:00 PM", "Mon-Fri: 5:00 PM - 7:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "IELTS Band 7+",
       description: "Advanced strategies and techniques for students targeting a band score of 7 or higher.",
       duration: "6 weeks",
       fee: "NPR 20,000",
-      schedule: ["Sat-Sun: 8:00 AM - 12:00 PM", "Mon-Wed-Fri: 6:00 PM - 8:00 PM"]
-    }
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    }
   ];
 
   const pteCourses = [
@@ -95,15 +93,13 @@ const TestPrepSection: React.FC = () => {
       description: "Basic course covering the format, question types, and essential strategies for PTE.",
       duration: "4 weeks",
       fee: "NPR 15,000",
-      schedule: ["Tue-Thu-Sat: 8:00 AM - 10:00 AM", "Mon-Wed-Fri: 5:00 PM - 7:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "PTE Advanced",
       description: "Intensive course with advanced strategies, regular practice tests, and personalized feedback.",
       duration: "6 weeks",
       fee: "NPR 22,000",
-      schedule: ["Mon-Wed-Fri: 10:00 AM - 12:00 PM", "Tue-Thu: 6:00 PM - 9:00 PM"]
-    }
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    }
   ];
 
   const skillTestCourses = [
@@ -112,43 +108,37 @@ const TestPrepSection: React.FC = () => {
       description: "Comprehensive training for food service industry, covering hygiene, customer service, and food preparation techniques.",
       duration: "8 weeks",
       fee: "NPR 15,000",
-      schedule: ["Mon-Wed-Fri: 9:00 AM - 11:00 AM", "Tue-Thu: 3:00 PM - 5:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "Kaigo (Caregiving)",
       description: "Specialized course for caregiving, focusing on elderly care, patient handling, and healthcare basics.",
       duration: "10 weeks",
       fee: "NPR 20,000",
-      schedule: ["Mon-Fri: 8:00 AM - 10:00 AM", "Sat-Sun: 1:00 PM - 4:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "Agriculture Skills",
       description: "Hands-on training in modern farming techniques, crop management, and sustainable agriculture practices.",
       duration: "12 weeks",
       fee: "NPR 18,000",
-      schedule: ["Tue-Thu-Sat: 7:00 AM - 10:00 AM", "Mon-Wed: 4:00 PM - 6:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "Construction Basics",
       description: "Practical course covering construction techniques, safety protocols, and basic masonry and carpentry skills.",
       duration: "10 weeks",
       fee: "NPR 17,000",
-      schedule: ["Mon-Fri: 8:00 AM - 10:00 AM", "Sat: 2:00 PM - 5:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "Driving Skills",
       description: "Professional driving course focusing on road safety, vehicle maintenance, and advanced driving techniques.",
       duration: "6 weeks",
       fee: "NPR 14,000",
-      schedule: ["Tue-Thu-Sat: 6:00 AM - 8:00 AM", "Mon-Wed: 5:00 PM - 7:00 PM"]
-    },
+      schedule: ["Sun to Fri: 7:00 AM - 6:00 PM"]    },
     {
       title: "Hospitality Management",
       description: "Training in hotel and restaurant management, customer service, and hospitality industry standards.",
       duration: "8 weeks",
       fee: "NPR 16,000",
-      schedule: ["Mon-Wed-Fri: 10:00 AM - 12:00 PM", "Tue-Thu: 4:00 PM - 6:00 PM"]
-    }
+      schedule: ["Sun to Fri:  7:00 AM - 6:00 PM"]    }
   ];
 
   return (
