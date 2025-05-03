@@ -49,25 +49,25 @@ const AboutSection: React.FC = () => {
     {
       name: " ...",
       position: "Founder & Director",
-      photo: "",
+      photo: "/user.png",
       bio: "4+ years of experience in international education consulting."
     },
     {
       name: " ...",
       position: "Chairman",
-      photo: "",
+      photo: "/user.png",
       bio: "Leading and managing the operation from 4+ years."
     },
     {
       name: " ...",
       position: "IELTS Instructor",
-      photo: "",
+      photo: "/user.png",
       bio: "Former British Council teacher with band score of 8.5."
     },
     {
       name: " ...",
       position: "Student Counselor",
-      photo: "",
+      photo: "/user.png",
       bio: "Specialized in Australian and Canadian university admissions."
     }
   ];
