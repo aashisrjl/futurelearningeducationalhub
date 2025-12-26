@@ -12,6 +12,7 @@ import UKPage from './pages/countries/UKPage';
 import CanadaPage from './pages/countries/CanadaPage';
 import USAPage from './pages/countries/USAPage';
 import KoreaPage from './pages/countries/KoreaPage';
+import NotPaid from './pages/NotPaid';
 
 const queryClient = new QueryClient();
 
@@ -43,13 +44,14 @@ const App = () => (
       <BrowserRouter>
         <ScrollHandler />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/study/japan" element={<JapanPage />} />
+          {/* <Route path="/" element={<Index />} /> */}
+          <Route path="/" element={<NotPaid />} />
+          {/* <Route path="/study/japan" element={<JapanPage />} />
           <Route path="/study/australia" element={<AustraliaPage />} />
           <Route path="/study/uk" element={<UKPage />} />
           <Route path="/study/canada" element={<CanadaPage />} />
           <Route path="/study/usa" element={<USAPage />} />
-          <Route path="/study/korea" element={<KoreaPage />} />
+          <Route path="/study/korea" element={<KoreaPage />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
