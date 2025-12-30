@@ -46,13 +46,14 @@ const App = () => (
         <Routes>
           {/* <Route path="/" element={<Index />} /> */}
           <Route path="/" element={<NotPaid />} />
-          {/* <Route path="/study/japan" element={<JapanPage />} />
+          <Route path="/study/japan" element={<JapanPage />} />
           <Route path="/study/australia" element={<AustraliaPage />} />
           <Route path="/study/uk" element={<UKPage />} />
           <Route path="/study/canada" element={<CanadaPage />} />
           <Route path="/study/usa" element={<USAPage />} />
-          <Route path="/study/korea" element={<KoreaPage />} /> */}
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/study/korea" element={<KoreaPage />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE 
+          */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

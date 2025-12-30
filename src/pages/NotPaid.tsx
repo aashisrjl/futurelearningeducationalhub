@@ -32,7 +32,7 @@ const NotPaid: React.FC = () => {
         setIsOpen(false);
       })
       .catch((error) => {
-        alert("Failed to send message ❌");
+        alert("Failed to send message");
         console.error(error);
       });
   };
