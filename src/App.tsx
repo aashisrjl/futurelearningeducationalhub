@@ -44,8 +44,8 @@ const App = () => (
       <BrowserRouter>
         <ScrollHandler />
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* <Route path="/" element={<NotPaid />} /> */}
+          {/* <Route path="/" element={<Index />} /> */}
+          <Route path="/" element={<NotPaid />} />
           <Route path="/study/japan" element={<JapanPage />} />
           <Route path="/study/australia" element={<AustraliaPage />} />
           <Route path="/study/uk" element={<UKPage />} />
