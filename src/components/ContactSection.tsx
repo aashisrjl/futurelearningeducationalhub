@@ -5,6 +5,31 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const ContactSection: React.FC = () => {
+  const targetEmail = "futurelearningeducationalhub@gmail.com";
+
+  const onContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const subject = String(formData.get("subject") || "").trim() || "Contact Form";
+    const message = String(formData.get("message") || "").trim();
+
+    const body = [
+      `Name: ${name || "N/A"}`,
+      `Email: ${email || "N/A"}`,
+      `Phone: ${phone || "N/A"}`,
+      "",
+      "Message:",
+      message || "N/A",
+    ].join("\n");
+
+    const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -25,7 +50,7 @@ const ContactSection: React.FC = () => {
                 Get In Touch
               </h3>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={onContactSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -36,6 +61,7 @@ const ContactSection: React.FC = () => {
                     </label>
                     <Input
                       id="name"
+                      name="name"
                       type="text"
                       placeholder="Enter your name"
                       className="w-full"
@@ -50,6 +76,7 @@ const ContactSection: React.FC = () => {
                     </label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="Enter your email"
                       className="w-full"
@@ -66,6 +93,7 @@ const ContactSection: React.FC = () => {
                   </label>
                   <Input
                     id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="Enter your phone number"
                     className="w-full"
@@ -81,6 +109,7 @@ const ContactSection: React.FC = () => {
                   </label>
                   <Input
                     id="subject"
+                    name="subject"
                     type="text"
                     placeholder="What is this regarding?"
                     className="w-full"
@@ -96,6 +125,7 @@ const ContactSection: React.FC = () => {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Your message here..."
                     rows={4}
                     className="w-full"
